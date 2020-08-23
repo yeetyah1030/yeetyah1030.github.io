@@ -28,10 +28,12 @@ html {
 
  a{
      display: block;
+     text-decoration: none;
      max-width: 400px;
      color: white;
      border: 2px solid white;
      padding: 10px 20px;
      margin: 0 auto 15px auto;
+     background-color:rgba(199, 174, 149, 0.7);
  }
 
