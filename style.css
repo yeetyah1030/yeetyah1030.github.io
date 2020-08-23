@@ -31,10 +31,10 @@ html {
 
  a{
      display: block;
+     max-width: 400px;
      color: white;
      border: 2px solid white;
      padding: 10px 20px;
-     margin-bottom: 15px;
-    
+     margin: 0 auto 15px auto;
  }
 
