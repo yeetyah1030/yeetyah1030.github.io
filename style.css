@@ -14,3 +14,7 @@ html {
      color: white;
      min-height: 100vh;
  }
+
+ .pfp{
+     width: 120px;
+ }
