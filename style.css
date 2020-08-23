@@ -14,9 +14,15 @@ html {
      color: white;
      min-height: 100vh;
      text-align: center;
+     font-family: 'Poppins', 'sans-serif';
 
  }
 
  .pfp{
      width: 120px;
  }
+
+ a{
+     color: white;
+ }
+
