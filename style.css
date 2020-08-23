@@ -13,6 +13,8 @@ html {
      background-image: url(img/bg1.png);
      color: white;
      min-height: 100vh;
+     text-align: center;
+
  }
 
  .pfp{
