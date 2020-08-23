@@ -23,6 +23,11 @@ html {
  }
 
  a{
+     display: block;
      color: white;
+     border: 2px solid white;
+     padding: 10px 20px;
+     margin-bottom: 15px;
+    
  }
 
