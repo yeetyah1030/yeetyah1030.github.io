@@ -37,3 +37,11 @@ html {
      background-color:rgba(199, 174, 149, 0.7);
  }
 
+ .platforms{
+     display: flex;
+
+ }
+
+a.platforms{
+    flex: 1;
+}
