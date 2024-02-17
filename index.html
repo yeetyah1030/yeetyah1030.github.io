@@ -1,53 +1,26 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>✧･ﾟ: *✧･ﾟ:* @charellejazmin links *:･ﾟ✧*:･ﾟ✧</title>
-        <meta charset="utf-8">
-        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge">-->
-        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>GeoAR.js demo</title>
+    <script src='https://aframe.io/releases/0.9.2/aframe.min.js'></script>
+    <script src="https://raw.githack.com/jeromeetienne/AR.js/master/aframe/build/aframe-ar.min.js"></script>
+    <script src="https://raw.githack.com/donmccurdy/aframe-extras/master/dist/aframe-extras.loaders.min.js"></script>
+    <script>
+        THREEx.ArToolkitContext.baseURL = 'https://raw.githack.com/jeromeetienne/ar.js/master/three.js/'
+    </script>
+</head>
+
+<body style='margin: 0; overflow: hidden;'>
+    <a-scene
+        vr-mode-ui="enabled: false"
+		embedded
+        arjs='sourceType: webcam; sourceWidth:1280; sourceHeight:960; displayWidth: 1280; displayHeight: 960; debugUIEnabled: false;'>
         
-        <!-- importing other stuff -->
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;800&display=swap" rel="stylesheet">
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@200&display=swap" rel="stylesheet">
-        
-        <!-- import the webpage's javascript file -->
-        <script src="/script.js" defer></script>
-    </head>
-    <body>
-        <!-- import the webpage's stylesheet -->
-        <link rel="stylesheet" href="/style.css">
+        <a-camera gps-camera rotation-reader></a-camera>
+	
+	<a-entity gltf-model="./assets/magnemite/scene.gltf" rotation="0 180 0" scale="0.15 0.15 0.15" gps-entity-place="longitude: 43.77247; latitude: 79.50642;" animation-mixer/>
 
-        <!--profile picture-->
-        <img class="pfp" src="img/pfpshape.png"/>
-
-        <!--my instagram @-->
-        <h1>@charellejazmin</h1>
-
-         <!--link-->
-         <h2>cool/important stuff:</h2>
-         <a href="https://www.pb-resources.com/petitions.html">PB Resources</a>
-         <a href="https://www.moneygirls.com/referred?friendid=1dc998">Money Girls - ladies, let's learn to independently run our own finances $ </a>
-         <a href="https://www.nytimes.com/interactive/2020/08/10/t-magazine/creative-women-designers-artists-chefs.html">15 Creative Women of Our Time</a>
-
-        <!--link-->
-        <h2>my stuff:</h2>
-        <a href="https://sites.google.com/view/cv-grp2/home?authuser=0">ITF 2020 Computer Vision Project</a>
-
-        <!--link-->
-        <!--<h2>Doro's Kitchen</h2>-->
-        <a href="http://www.doros-kitchen.digital/">Doro's Kitchen</a>
-
-         <!--link to github repo-->
-         <a href="https://github.com/yeetyah1030/yeetyah1030.github.io">See repo for this project here✧･ﾟ</a>
-
-        <!--other places you can find me-->
-        <h2>find me on:</h2>
-        <div class="platforms">
-            <a href="www.linkedin.com/in/charelleconstantino">LinkedIn</a>
-            <a href="https://open.spotify.com/user/char.elle?si=XrtJIRtCTeeig1t3BkViCA">Spotify</a>
-            <a href="https://vsco.co/charellejazmin">VSCO</a>
-        </div>
-
-
-    </body>
-</html>
+	</a-scene>
+</body>
