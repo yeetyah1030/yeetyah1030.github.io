@@ -12,7 +12,7 @@ AFRAME.registerComponent('tap-to-place', {
             svgImage.setAttribute('y', tapPosition.y);
             svgImage.setAttribute('width', '100');
             svgImage.setAttribute('height', '100');
-            svgImage.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'your-svg-image.svg');
+            svgImage.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'star1.svg');
 
             // Append the SVG image to the scene
             sceneEl.appendChild(svgImage);
