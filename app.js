@@ -1,21 +1,21 @@
+// app.js
 AFRAME.registerComponent('tap-to-place', {
     init: function () {
-        var sceneEl = document.querySelector('#scene');
-
-        sceneEl.addEventListener('onefingerstart', function (event) {
-            // Get the position where the user tapped
-            var tapPosition = event.detail.intersection.point;
-
-            // Create an SVG image
-            var svgImage = document.createElementNS('http://www.w3.org/2000/svg', 'image');
-            svgImage.setAttribute('x', tapPosition.x);
-            svgImage.setAttribute('y', tapPosition.y);
-            svgImage.setAttribute('width', '100');
-            svgImage.setAttribute('height', '100');
-            svgImage.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'star1.svg');
-
-            // Append the SVG image to the scene
-            sceneEl.appendChild(svgImage);
-        });
+        var sceneEl = this.el.sceneEl;
+        sceneEl.addEventListener('onefingerstart', this.handleTap.bind(this));
+    },
+    handleTap: function (event) {
+        // Create SVG image at tap location
+        var tapX = event.detail.position.x;
+        var tapY = event.detail.position.y;
+        
+        var svgImage = document.createElementNS('http://www.w3.org/2000/svg', 'image');
+        svgImage.setAttributeNS('http://www.w3.org/1999/xlink', 'href', 'star1.svg');
+        svgImage.setAttribute('x', tapX);
+        svgImage.setAttribute('y', tapY);
+        // Set other attributes as needed
+        
+        // Append SVG image to scene or specific entity
+        this.el.appendChild(svgImage);
     }
 });
